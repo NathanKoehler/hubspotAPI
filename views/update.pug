@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        title Update contact info
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .form-wrapper
+            p User: #{userEmail}
+            p Citizenship Status: #{citizenshipStatus}
+            form(method="POST")
+                label(for="citizenship_status") Set Citizenship Status
+                input(type="text" name="citizenship_status" required)
+                input(type="submit" value="Submit")
+
+
+        h1 What is your Citizenship Status?
+        form(method="POST")
+            input#citizen(type='radio' name='citizenship_status' value='citizen')
+            label(for='citizen') Citizen
+            br
+            input#green_card_holder(type='radio' name='citizenship_status' value='green-card-holder')
+            label(for='green_card_holder') Green Card Holder
+            br
+            input#non_permanent_resident(type='radio' name='citizenship_status' value='non-permanent-resident')
+            label(for='non_permanent_resident') Non-Permanent Resident
+            br
+            br
+            input(type='submit' value='Submit')
